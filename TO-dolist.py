@@ -1,17 +1,4 @@
 #!/usr/bin/env python3
-"""
-Simple Command-Line To-Do List App
------------------------------------
-Features:
-1. Add a new task
-2. View all tasks
-3. Mark a task as done
-4. Delete a task
-5. Clear all tasks
-6. Exit
-
-Tasks persist in todo.json (same folder).
-"""
 
 import json
 from pathlib import Path
@@ -30,11 +17,11 @@ def save_tasks(tasks):
 
 def display_tasks(tasks):
     if not tasks:
-        print("\n✅ No tasks yet!\n")
+        print("\nNo tasks yet!\n")
         return
     print("\nYour To-Do List:")
     for i, task in enumerate(tasks, start=1):
-        status = "✔" if task["done"] else "✖"
+        status = "Completed" if task["done"] else "Not Completed"
         print(f"{i}. [{status}] {task['title']}")
     print()
 
@@ -87,7 +74,7 @@ def main():
     tasks = load_tasks()
 
     while True:
-        print("\n--- TO-DO MENU ---")
+        print("\nTO-DO MENU ")
         print("1. View tasks")
         print("2. Add task")
         print("3. Mark task as done")
@@ -119,3 +106,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
