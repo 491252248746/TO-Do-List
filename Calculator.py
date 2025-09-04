@@ -1,16 +1,6 @@
 #!/usr/bin/env python3
-"""
-Simple Calculator
-------------------
-Prompts the user for:
-1. Two numbers
-2. An operation (+, -, *, /)
-
-Then performs the calculation and displays the result.
-"""
-
 def main():
-    print("=== Simple Calculator ===")
+    print("Simple Calculator")
 
     # Get two numbers from the user
     try:
@@ -49,3 +39,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
